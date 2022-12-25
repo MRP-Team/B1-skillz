@@ -15,8 +15,9 @@ $(function () {
   });
 
   function appendSkillNode(skill) {
+    const skillLevel = Math.round(skill.level * 100)/100
     const node = $(`<div class="col-6 skill">
-    <div class="title"><i class="${skill.icon}"></i> ${skill.name}: ${skill.level}%</div>
+    <div class="title"><i class="${skill.icon}"></i> ${skill.name}: ${skillLevel}%</div>
     <div class="progress" data-skill="${skill.name}"><div class="fill"></div></div>
   </div>`);
 
